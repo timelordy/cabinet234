@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "2.0",
+  "generatedAt": "2026-08-07T12:00:00+03:00",
+  "mode": "live",
+  "products": [
+    {
+      "id": "unitools-lintels",
+      "name": "UniTools · Перемычки",
+      "summary": "Подбор и размещение перемычек с проверкой неподдерживаемых случаев.",
+      "channel": "stable",
+      "visibility": "public",
+      "version": "1.0.4",
+      "releasedAt": "2026-08-06",
+      "compatibility": "Revit / Windows",
+      "platforms": [
+        "Revit",
+        "pyRevit",
+        "Windows"
+      ],
+      "action": {
+        "kind": "unavailable",
+        "label": "Пакет ещё не опубликован",
+        "url": null
+      }
+    },
+    {
+      "id": "uniloader",
+      "name": "UniLoader",
+      "summary": "Общий загрузчик и точка доставки обновлений для инструментов команды.",
+      "channel": "stable",
+      "visibility": "public",
+      "version": null,
+      "releasedAt": null,
+      "compatibility": "Windows",
+      "platforms": [
+        "Windows",
+        ".NET"
+      ],
+      "action": {
+        "kind": "unavailable",
+        "label": "Версия уточняется",
+        "url": null
+      }
+    },
+    {
+      "id": "spravka-p",
+      "name": "Шахматка и справка",
+      "summary": "Два Excel-отчёта из одной исходной выгрузки помещений DiRoots/Revit.",
+      "channel": "stable",
+      "visibility": "public",
+      "version": "1.2.7",
+      "releasedAt": "2026-07-27",
+      "compatibility": "Windows / Excel",
+      "platforms": [
+        "DiRoots",
+        "Revit",
+        "Excel"
+      ],
+      "action": {
+        "kind": "unavailable",
+        "label": "Пакет ещё не опубликован",
+        "url": null
+      }
+    },
+    {
+      "id": "kvartirnik",
+      "name": "Квартирник",
+      "summary": "Отдельный веб-контур подбора и проверки квартирных планировок.",
+      "channel": "beta",
+      "visibility": "public",
+      "version": null,
+      "releasedAt": null,
+      "compatibility": "Веб-приложение",
+      "platforms": [
+        "Web",
+        "CAD",
+        "TypeScript"
+      ],
+      "action": {
+        "kind": "external",
+        "label": "Открыть сайт",
+        "url": "https://timelordy.github.io/kvartirnik-status/"
+      }
+    },
+    {
+      "id": "sectionmaker",
+      "name": "SectionMaker",
+      "summary": "Конструктор жилых секций и планировочных вариантов для Revit.",
+      "channel": "beta",
+      "visibility": "public",
+      "version": null,
+      "releasedAt": null,
+      "compatibility": "Revit 2022",
+      "platforms": [
+        "Revit",
+        "Dynamo",
+        "Python"
+      ],
+      "action": {
+        "kind": "unavailable",
+        "label": "Публичный пакет готовится",
+        "url": null
+      }
+    },
+    {
+      "id": "unitools-eom",
+      "name": "UniTools · ЭОМ",
+      "summary": "Инженерные инструменты размещения и обработки элементов электрической модели.",
+      "channel": "beta",
+      "visibility": "public",
+      "version": "1.2.1",
+      "releasedAt": null,
+      "compatibility": "Revit / Windows",
+      "platforms": [
+        "Revit",
+        "pyRevit",
+        "Python"
+      ],
+      "action": {
+        "kind": "unavailable",
+        "label": "Публичный пакет готовится",
+        "url": null
+      }
+    },
+    {
+      "id": "prokuvor",
+      "name": "ВОР из IFC",
+      "summary": "Подготовка ведомостей объёмов работ на основе данных IFC-модели.",
+      "channel": "beta",
+      "visibility": "public",
+      "version": null,
+      "releasedAt": null,
+      "compatibility": "IFC / Windows",
+      "platforms": [
+        "IFC",
+        "Python",
+        "Excel"
+      ],
+      "action": {
+        "kind": "unavailable",
+        "label": "Публичный пакет готовится",
+        "url": null
+      }
+    }
+  ]
+}
