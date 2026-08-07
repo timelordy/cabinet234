@@ -83,30 +83,10 @@
       }
     },
     {
-      "id": "sectionmaker",
-      "name": "SectionMaker",
-      "summary": "Конструктор жилых секций и планировочных вариантов для Revit.",
-      "channel": "beta",
-      "visibility": "public",
-      "version": null,
-      "releasedAt": null,
-      "compatibility": "Revit 2022",
-      "platforms": [
-        "Revit",
-        "Dynamo",
-        "Python"
-      ],
-      "action": {
-        "kind": "unavailable",
-        "label": "Публичный пакет готовится",
-        "url": null
-      }
-    },
-    {
       "id": "unitools-eom",
       "name": "UniTools · ЭОМ",
       "summary": "Инженерные инструменты размещения и обработки элементов электрической модели.",
-      "channel": "beta",
+      "channel": "stable",
       "visibility": "public",
       "version": "1.2.1",
       "releasedAt": null,
@@ -115,26 +95,6 @@
         "Revit",
         "pyRevit",
         "Python"
-      ],
-      "action": {
-        "kind": "unavailable",
-        "label": "Публичный пакет готовится",
-        "url": null
-      }
-    },
-    {
-      "id": "prokuvor",
-      "name": "ВОР из IFC",
-      "summary": "Подготовка ведомостей объёмов работ на основе данных IFC-модели.",
-      "channel": "beta",
-      "visibility": "public",
-      "version": null,
-      "releasedAt": null,
-      "compatibility": "IFC / Windows",
-      "platforms": [
-        "IFC",
-        "Python",
-        "Excel"
       ],
       "action": {
         "kind": "unavailable",
