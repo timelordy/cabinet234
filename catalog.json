@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0",
-  "generatedAt": "2026-08-07T12:00:00+03:00",
+  "generatedAt": "2026-08-09T12:06:12+03:00",
   "mode": "live",
   "products": [
     {
@@ -65,20 +65,20 @@
     {
       "id": "kvartirnik",
       "name": "Квартирник",
-      "summary": "Отдельный веб-контур подбора и проверки квартирных планировок.",
+      "summary": "Самостоятельный проект для подбора и проверки квартирных планировок.",
       "channel": "beta",
       "visibility": "public",
       "version": null,
       "releasedAt": null,
-      "compatibility": "Веб-приложение",
+      "compatibility": "Отдельный сайт",
       "platforms": [
-        "Web",
-        "CAD",
+        "Сайт",
+        "САПР",
         "TypeScript"
       ],
       "action": {
         "kind": "external",
-        "label": "Открыть сайт",
+        "label": "Открыть Квартирник",
         "url": "https://timelordy.github.io/kvartirnik-status/"
       }
     },
@@ -89,7 +89,7 @@
       "channel": "stable",
       "visibility": "public",
       "version": "1.2.1",
-      "releasedAt": null,
+      "releasedAt": "2026-05-21",
       "compatibility": "Revit / Windows",
       "platforms": [
         "Revit",
