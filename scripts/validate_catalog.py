@@ -15,6 +15,7 @@ from typing import Any
 CHANNELS = {"stable", "beta", "alpha", "archived"}
 VISIBILITY = {"public", "hidden"}
 ACTIONS = {"download", "external", "unavailable"}
+ARTIFACT_FORMATS = {"exe": ".exe", "zip": ".zip"}
 EXPERIMENT_STATUSES = {"archived", "paused", "watching"}
 EXPERIMENT_IDS = {
     "sectionmaker",
@@ -59,8 +60,11 @@ def _validate_download(product: dict[str, Any]) -> None:
         raise ValueError("download URL must point to a Cabinet 234 release")
     if not isinstance(artifact, dict):
         raise ValueError("download action requires artifact metadata")
-    if artifact.get("format") != "zip" or int(artifact.get("sizeBytes", 0)) <= 0:
+    artifact_format = artifact.get("format")
+    if artifact_format not in ARTIFACT_FORMATS or int(artifact.get("sizeBytes", 0)) <= 0:
         raise ValueError("download artifact size or format is invalid")
+    if not action["url"].lower().endswith(ARTIFACT_FORMATS[artifact_format]):
+        raise ValueError("download URL extension does not match artifact format")
     if not SHA256_RE.fullmatch(str(artifact.get("sha256", ""))):
         raise ValueError("download artifact SHA-256 is invalid")
 
