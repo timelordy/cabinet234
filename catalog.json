@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0",
-  "generatedAt": "2026-08-10T12:38:18+00:00",
+  "generatedAt": "2026-08-10T13:05:51+00:00",
   "mode": "live",
   "experiments": [
     {
@@ -196,7 +196,7 @@
       "summary": "Инженерные инструменты размещения и обработки элементов электрической модели.",
       "channel": "stable",
       "visibility": "public",
-      "version": "1.3.3",
+      "version": "1.3.4",
       "releasedAt": "2026-08-10",
       "compatibility": "Revit / Windows",
       "platforms": [
@@ -206,13 +206,13 @@
       ],
       "action": {
         "kind": "download",
-        "label": "Скачать 1.3.3",
-        "url": "https://github.com/timelordy/cabinet234/releases/download/unitools-eom-v1.3.3/UniTools-EOM-1.3.3.zip"
+        "label": "Скачать установщик 1.3.4",
+        "url": "https://github.com/timelordy/cabinet234/releases/download/unitools-eom-v1.3.4/UniTools-EOM-1.3.4-Setup.exe"
       },
       "artifact": {
-        "format": "zip",
-        "sizeBytes": 21387580,
-        "sha256": "20729dceeee393754e970307e378ea43d279eb69055157071f4caaefb6a85e68"
+        "format": "exe",
+        "sizeBytes": 94542984,
+        "sha256": "13ac434830194d9afd3c92f77d51fac9df0c790568637052c600d5860cee08b4"
       }
     }
   ]
