@@ -1,5 +1,5 @@
 {
   "schemaVersion": "1.0",
-  "enabled": false,
-  "ingestUrl": null
+  "enabled": true,
+  "ingestUrl": "https://d5d0oq236l2qvaflspa3.avjje9e3.apigw.yandexcloud.net/v1/events"
 }
