@@ -27,7 +27,7 @@ EXPERIMENT_IDS = {
 }
 DOWNLOAD_PREFIX = "https://github.com/timelordy/cabinet234/releases/download/"
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
-EXPERIMENT_PERIOD_RE = re.compile(r"^\d{4}(?:–\d{4})?$")
+EXPERIMENT_PERIOD_RE = re.compile(r"^\d{4}(?:–(?:\d{4}|н\.в\.))?$")
 
 
 def _require_text(value: Any, field: str) -> str:
