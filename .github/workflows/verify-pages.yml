@@ -26,7 +26,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if find . -path ./.git -prune -o -type f \( -name '*.env' -o -name '*.key' -o -name '*.pem' -o -name '*.log' -o -name '*.pyc' \) -print | grep -q .; then
+          if find . -path ./.git -prune -o -type f \( -name '*.env' -o -name '.env.*' -o -name '*.key' -o -name '*.pem' -o -name '*.log' -o -name '*.pyc' \) -print | grep -q .; then
             echo "Forbidden public artifact found"
             exit 1
           fi
