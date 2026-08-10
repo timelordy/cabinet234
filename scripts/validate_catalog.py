@@ -15,8 +15,19 @@ from typing import Any
 CHANNELS = {"stable", "beta", "alpha", "archived"}
 VISIBILITY = {"public", "hidden"}
 ACTIONS = {"download", "external", "unavailable"}
+EXPERIMENT_STATUSES = {"archived", "paused", "watching"}
+EXPERIMENT_IDS = {
+    "sectionmaker",
+    "divor",
+    "timka",
+    "revit-mcp",
+    "clash-detector",
+    "ai-bcf",
+    "pwall",
+}
 DOWNLOAD_PREFIX = "https://github.com/timelordy/cabinet234/releases/download/"
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
+EXPERIMENT_PERIOD_RE = re.compile(r"^\d{4}(?:–\d{4})?$")
 
 
 def _require_text(value: Any, field: str) -> str:
@@ -55,19 +66,50 @@ def _validate_download(product: dict[str, Any]) -> None:
 
 
 def validate_catalog(data: dict[str, Any]) -> list[dict[str, Any]]:
-    if data.get("schemaVersion") != "3.0" or data.get("mode") != "live":
+    if data.get("schemaVersion") != "4.0" or data.get("mode") != "live":
         raise ValueError("unsupported catalog contract")
     _require_text(data.get("generatedAt"), "generatedAt")
+    experiments = data.get("experiments")
     products = data.get("products")
+    if not isinstance(experiments, list):
+        raise ValueError("experiments must be an array")
     if not isinstance(products, list):
         raise ValueError("products must be an array")
     ids: set[str] = set()
+    experiment_ids: set[str] = set()
+    expected_experiment_keys = {
+        "id", "name", "direction", "context", "summary",
+        "period", "status", "icon", "technologies",
+    }
+    for experiment in experiments:
+        if not isinstance(experiment, dict) or set(experiment) != expected_experiment_keys:
+            raise ValueError("experiment has an invalid public shape")
+        experiment_id = _require_text(experiment.get("id"), "experiment.id")
+        if experiment_id in ids:
+            raise ValueError("duplicate catalog id: %s" % experiment_id)
+        ids.add(experiment_id)
+        experiment_ids.add(experiment_id)
+        for field in ("name", "direction", "context", "summary", "period", "icon"):
+            _require_text(experiment.get(field), "experiment.%s" % field)
+        if not EXPERIMENT_PERIOD_RE.fullmatch(experiment["period"]):
+            raise ValueError("%s has an invalid research period" % experiment_id)
+        if experiment.get("status") not in EXPERIMENT_STATUSES:
+            raise ValueError("%s has an invalid research status" % experiment_id)
+        if experiment.get("icon") != "%s.png" % experiment_id:
+            raise ValueError("%s has an invalid icon name" % experiment_id)
+        technologies = experiment.get("technologies")
+        if not isinstance(technologies, list) or not technologies:
+            raise ValueError("%s must list technologies" % experiment_id)
+        for technology in technologies:
+            _require_text(technology, "experiment.technologies")
+    if experiment_ids != EXPERIMENT_IDS:
+        raise ValueError("experiment allowlist changed")
     for product in products:
         if not isinstance(product, dict):
             raise ValueError("product must be an object")
         product_id = _require_text(product.get("id"), "product.id")
         if product_id in ids:
-            raise ValueError("duplicate product id: %s" % product_id)
+            raise ValueError("duplicate catalog id: %s" % product_id)
         ids.add(product_id)
         _require_text(product.get("name"), "product.name")
         _require_text(product.get("summary"), "product.summary")

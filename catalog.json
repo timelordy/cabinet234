@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "3.0",
-  "generatedAt": "2026-08-09T13:16:48+03:00",
+  "schemaVersion": "4.0",
+  "generatedAt": "2026-08-10T12:00:00+03:00",
   "mode": "live",
   "experiments": [
     {
@@ -9,6 +9,9 @@
       "direction": "Генеративное проектирование",
       "context": "Предшественник «Квартирника»",
       "summary": "Ранний конструктор жилых секций, из которого вырос самостоятельный проект «Квартирник».",
+      "period": "2023–2024",
+      "status": "archived",
+      "icon": "sectionmaker.png",
       "technologies": [
         "Revit",
         "WPF",
@@ -21,6 +24,9 @@
       "direction": "Данные и сметы",
       "context": "Исследовательское направление",
       "summary": "Сопоставление элементов IFC с нормативным справочником и подготовка ведомостей объёмов работ.",
+      "period": "2024–2025",
+      "status": "paused",
+      "icon": "divor.png",
       "technologies": [
         "IFC",
         "НСИ",
@@ -33,6 +39,9 @@
       "direction": "Знания и помощники",
       "context": "Исследовательское направление",
       "summary": "Помощник по Revit и среде общих данных с поиском ответов в проектной базе знаний.",
+      "period": "2024–2025",
+      "status": "paused",
+      "icon": "timka.png",
       "technologies": [
         "Revit",
         "Поиск по знаниям",
@@ -45,6 +54,9 @@
       "direction": "Интеграция с моделью",
       "context": "Исследовательское направление",
       "summary": "Контур доступа помощников к данным и разрешённым операциям Autodesk Revit.",
+      "period": "2025–2026",
+      "status": "watching",
+      "icon": "revit-mcp.png",
       "technologies": [
         "Revit",
         "MCP",
@@ -57,6 +69,9 @@
       "direction": "Контроль качества",
       "context": "Исследовательское направление",
       "summary": "Поиск, группировка и выпуск отчётов о коллизиях между инженерными моделями.",
+      "period": "2023–2024",
+      "status": "archived",
+      "icon": "clash-detector.png",
       "technologies": [
         "IFC",
         "Коллизии",
@@ -69,6 +84,9 @@
       "direction": "Маршрутизация замечаний",
       "context": "Исследовательское направление",
       "summary": "Разбор BCF-замечаний и исследование их автоматического распределения по ответственным.",
+      "period": "2025",
+      "status": "watching",
+      "icon": "ai-bcf.png",
       "technologies": [
         "BCF",
         "IFC",
@@ -81,6 +99,9 @@
       "direction": "Автоматизация Revit",
       "context": "Алгоритмический эксперимент",
       "summary": "Исследование алгоритмов соединения стен и разбора секций внутри модели Revit.",
+      "period": "2022–2023",
+      "status": "archived",
+      "icon": "pwall.png",
       "technologies": [
         "Revit",
         "Стены",
