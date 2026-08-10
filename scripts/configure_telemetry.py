@@ -11,11 +11,10 @@ from pathlib import Path
 
 def validate_url(url: str) -> str:
     parsed = urllib.parse.urlparse(url.strip())
-    allowed = (".apigw.yandexcloud.net", ".functions.yandexcloud.net")
-    if parsed.scheme != "https" or not parsed.hostname or not parsed.hostname.endswith(allowed):
-        raise ValueError("telemetry URL must be an HTTPS Yandex Cloud endpoint")
-    if parsed.username or parsed.password or parsed.fragment:
-        raise ValueError("telemetry URL must not contain credentials or a fragment")
+    if parsed.scheme != "https" or not parsed.hostname or not parsed.hostname.endswith(".apigw.yandexcloud.net"):
+        raise ValueError("telemetry URL must be an HTTPS Yandex API Gateway endpoint")
+    if parsed.username or parsed.password or parsed.query or parsed.fragment:
+        raise ValueError("telemetry URL must not contain credentials, a query, or a fragment")
     return url.strip()
 
 

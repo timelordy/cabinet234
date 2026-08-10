@@ -20,10 +20,9 @@ def validate(path: Path) -> None:
     if data["enabled"] is True:
         url = str(data["ingestUrl"] or "")
         parsed = urllib.parse.urlparse(url)
-        allowed = (".apigw.yandexcloud.net", ".functions.yandexcloud.net")
-        if parsed.scheme != "https" or not parsed.hostname or not parsed.hostname.endswith(allowed):
-            raise ValueError("enabled telemetry must use a Yandex Cloud HTTPS endpoint")
-        if parsed.username or parsed.password or parsed.fragment:
+        if parsed.scheme != "https" or not parsed.hostname or not parsed.hostname.endswith(".apigw.yandexcloud.net"):
+            raise ValueError("enabled telemetry must use a Yandex API Gateway HTTPS endpoint")
+        if parsed.username or parsed.password or parsed.query or parsed.fragment:
             raise ValueError("telemetry endpoint contains forbidden URL parts")
 
 
