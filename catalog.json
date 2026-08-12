@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0",
-  "generatedAt": "2026-08-12T09:17:38+00:00",
+  "generatedAt": "2026-08-12T10:28:41+00:00",
   "mode": "live",
   "experiments": [
     {
@@ -116,7 +116,7 @@
       "summary": "Подбор и размещение перемычек с проверкой неподдерживаемых случаев.",
       "channel": "stable",
       "visibility": "public",
-      "version": "1.0.11",
+      "version": "1.0.12",
       "releasedAt": "2026-08-12",
       "compatibility": "Revit / Windows",
       "platforms": [
@@ -126,13 +126,13 @@
       ],
       "action": {
         "kind": "download",
-        "label": "Скачать установщик 1.0.11",
-        "url": "https://github.com/timelordy/cabinet234/releases/download/unitools-lintels-v1.0.11/UniTools-Lintels-1.0.11-Setup.exe"
+        "label": "Скачать установщик 1.0.12",
+        "url": "https://github.com/timelordy/cabinet234/releases/download/unitools-lintels-v1.0.12/UniTools-Lintels-1.0.12-Setup.exe"
       },
       "artifact": {
         "format": "exe",
-        "sizeBytes": 73908868,
-        "sha256": "7c8bdc6f0670e67a93e7cb9c161bfcb44cf60ed818ea8f2e57417daad677687f"
+        "sizeBytes": 74156676,
+        "sha256": "12e9236cc9303bd80ffcf345e34c0fc5ed53f717616426dcbd04a92f07fa7def"
       }
     },
     {
