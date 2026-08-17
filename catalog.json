@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0",
-  "generatedAt": "2026-08-14T10:58:37+00:00",
+  "generatedAt": "2026-08-17T14:45:49+00:00",
   "mode": "live",
   "experiments": [
     {
@@ -125,14 +125,9 @@
         "Windows"
       ],
       "action": {
-        "kind": "download",
-        "label": "Скачать установщик 1.0.27",
-        "url": "https://github.com/timelordy/cabinet234/releases/download/unitools-lintels-v1.0.27/UniTools-Lintels-1.0.27-Setup.exe"
-      },
-      "artifact": {
-        "format": "exe",
-        "sizeBytes": 74361929,
-        "sha256": "41195bf9c0448c219360a16293c18d3625aaa892b2daa06910c8647d1ac5255b"
+        "kind": "unavailable",
+        "label": "Скачивание временно закрыто",
+        "url": null
       }
     },
     {
@@ -210,14 +205,9 @@
         "Python"
       ],
       "action": {
-        "kind": "download",
-        "label": "Скачать установщик 1.4.0",
-        "url": "https://github.com/timelordy/cabinet234/releases/download/unitools-eom-v1.4.0/UniTools-EOM-1.4.0-Setup.exe"
-      },
-      "artifact": {
-        "format": "exe",
-        "sizeBytes": 94698120,
-        "sha256": "10dff9a88b09d628859fe68a09347469f874fbbb9cc88ba452a8203ba06fc94d"
+        "kind": "unavailable",
+        "label": "Скачивание временно закрыто",
+        "url": null
       }
     }
   ]
